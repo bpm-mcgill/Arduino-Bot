@@ -2,7 +2,8 @@ import discord, random, serial, time
 from discord.ext import commands, tasks
 client = commands.Bot(command_prefix="$")
 ledstate = False
-serport = serial.Serial("/dev/ttyACM0", baudrate=9600, timeout=1)
+#serport = serial.Serial("/dev/ttyACM0", baudrate=9600, timeout=1)
+serport = serial.Serial("PUT YOUR ARDUINO PATH HERE", baudrate=9600, timeout=1)
 
 @client.event
 async def on_ready():
